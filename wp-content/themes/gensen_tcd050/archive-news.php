@@ -11,7 +11,7 @@
 
 <?php if ( have_posts() ) : ?>
   <div id="recent_news">
-   <h2 class="headline rich_font"><?php echo esc_html($dp_options['news_label']); ?></h2>
+   <h2 class="headline rich_font"><?php echo esc_html($dp_options['introduce_label']); ?></h2>
    <ol<?php if ($dp_options['show_date_news']) echo ' class="show_date"'; ?>>
 <?php while ( have_posts() ) : the_post(); ?>
     <li class="clearfix">
