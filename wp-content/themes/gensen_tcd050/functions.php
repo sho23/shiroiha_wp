@@ -746,7 +746,7 @@ if (function_exists('register_post_type')) {
 				( is_tax( $dp_options['introduce_category2_slug'] ) && $dp_options['use_introduce_category2'] && $dp_options['use_introduce_category2_introduce_archive'] ) ||
 				( is_tax( $dp_options['introduce_category3_slug'] ) && $dp_options['use_introduce_category3'] && $dp_options['use_introduce_category3_introduce_archive'] )
 			) {
-				$template_name = 'archive-introduce.php';
+				$template_name = 'archive-news.php';
 			} elseif ( is_category() || is_tax( array( $dp_options['category2_slug'], $dp_options['category3_slug'], $dp_options['introduce_category1_slug'], $dp_options['introduce_category2_slug'], $dp_options['introduce_category3_slug'] ) ) ) {
 				$template_name = 'custom_search_results.php';
 			}
