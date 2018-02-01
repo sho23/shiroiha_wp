@@ -1,0 +1,7 @@
+@font-face {
+	font-family: 'smartfont';
+	src: url('../fonts/smartfont.otf');
+}
+body {
+	font-family: 'smartfont';
+}

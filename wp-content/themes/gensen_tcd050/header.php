@@ -21,6 +21,8 @@ if (! $dp_options) $dp_options = get_desing_plus_option();
 <?php endif; ?>
 <?php wp_enqueue_style('style', get_stylesheet_uri(), false, version_num(), 'all'); wp_enqueue_script( 'jquery' ); if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 <?php wp_head(); ?>
+
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/custom.css">
 </head>
 <body id="body" <?php body_class(); ?>>
 
