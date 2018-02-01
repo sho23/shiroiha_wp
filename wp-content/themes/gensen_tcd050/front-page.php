@@ -367,7 +367,7 @@
 
 			//カルーセルスライダー
 			elseif ( $content['cb_content_select'] == 'carousel' ) :
-				$args = array('post_type' => 'post', 'posts_per_page' => $content['cb_post_num'], 'ignore_sticky_posts' => 1, 'orderby' => 'date', 'order' => 'DESC');
+				$args = array('post_type' => 'post', 'posts_per_page' => $content['cb_post_num'], 'ignore_sticky_posts' => 1, 'orderby' => 'date', 'order' => 'ASC');
 
 				if ($content['cb_post_type'] == 'introduce') :
 					$args['post_type'] = $dp_options['introduce_slug'];
@@ -380,7 +380,7 @@
 					endif;
 				else :
 					if ($content['cb_list_type'] == 'recommend_post' || $content['cb_list_type'] == 'recommend_post2') :
-						$args['orderby'] = 'rand';
+						$args['orderby'] = 'ID';
 						$args['meta_key'] = $content['cb_list_type'];
 						$args['meta_value'] = 'on';
 					endif;
