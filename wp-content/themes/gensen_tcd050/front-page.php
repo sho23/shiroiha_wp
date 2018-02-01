@@ -485,7 +485,7 @@
 			// 最新ブログ記事一覧
 			elseif ( $content['cb_content_select'] == 'blog_list' ) :
 				$args = array('post_type' => 'post', 'posts_per_page' => $content['cb_post_num'], 'ignore_sticky_posts' => 1, 'orderby' => 'date', 'order' => 'DESC');
-				$cb_posts = new WP_Query($args);
+				$cb_posts = new WP_Query('category_name=column', $args);
 				if ($cb_posts->have_posts()) :
 ?>
 
