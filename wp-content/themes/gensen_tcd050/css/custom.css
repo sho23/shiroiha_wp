@@ -2,6 +2,6 @@
 	font-family: 'smartfont';
 	src: url('../fonts/smartfont.otf');
 }
-body {
+body, input, textarea, select {
 	font-family: 'smartfont';
 }
