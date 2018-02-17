@@ -130,6 +130,15 @@
 			} ?>
     </div>
     <div class="info">
+      <div class="shoulder_copy">
+        <?php
+          $data = trim(get_post_meta($post->ID, 'shoulder_copy', true));
+          $elms=explode(',',$data);
+         ?>
+        <div>住所：<?php echo $elms[0]; ?></div>
+        <div>電話：<?php echo $elms[1]; ?></div>
+        <div>WEB：<?php echo $elms[2]; ?></div>
+      </div>
 <?php
         $metas = array();
         if ($post->post_type == 'post') {

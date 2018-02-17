@@ -38,3 +38,10 @@ body, input, textarea, select {
 .category-chiryoho .archive_sort {
 	display: none;
 }
+
+.archive .shoulder_copy {
+	display: none;
+}
+.post-type-archive-introduce .shoulder_copy {
+	display: inherit;
+}

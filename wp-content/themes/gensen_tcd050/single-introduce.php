@@ -26,15 +26,23 @@ $dp_options = get_desing_plus_option();
 <div id="main_col" class="clearfix">
 
  <div id="left_col">
-
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
   <div id="article">
 
 <?php if ($dp_options['show_shoulder_copy_introduce'] && get_post_meta($post->ID, 'shoulder_copy', true)) { ?>
-   <div class="introduce_shoulder_copy">
-    <?php echo esc_html(trim(get_post_meta($post->ID, 'shoulder_copy', true))); ?>
-   </div>
+  <?php if (false) { ?>
+     <div class="introduce_shoulder_copy">
+      <?php echo esc_html(trim(get_post_meta($post->ID, 'shoulder_copy', true))); ?>
+     </div>
+    <?php } ?>
+    <?php
+      $data = trim(get_post_meta($post->ID, 'shoulder_copy', true));
+      $elms=explode(',',$data);
+     ?>
+    <div>住所：<?php echo $elms[0]; ?></div>
+    <div>電話：<?php echo $elms[1]; ?></div>
+    <div>WEB：<?php echo $elms[2]; ?></div>
 <?php } ?>
 
 <?php if ($introduce_slider && $page == '1') { ?>
