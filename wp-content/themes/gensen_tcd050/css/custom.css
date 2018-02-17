@@ -5,3 +5,29 @@
 body, input, textarea, select {
 	font-family: 'smartfont';
 }
+
+.wrap {
+	width:100%;
+	background:#000;
+	margin:20px auto;
+	padding:10px;
+}
+.wrap p {
+	height:400px;
+}
+.wrap ul {
+	display:block;
+	overflow:hidden;
+	margin-top:10px;
+	margin-right:-10px;
+	clear:both;
+}
+.wrap li {
+	display:block;
+	float:left;
+	background:#fff;
+	argin-right:10px;
+}
+.wrap li img {
+	cursor:pointer;
+}

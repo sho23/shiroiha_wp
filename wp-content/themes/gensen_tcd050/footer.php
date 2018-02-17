@@ -568,5 +568,18 @@ jQuery(document).ready(function($){
 <?php } ?>
 
 <?php wp_footer(); ?>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  $("img.ChangePhoto").click(function(){
+    var ImgSrc = $(this).attr("src");
+    var ImgAlt = $(this).attr("alt");
+    $("img#MainPhoto").attr({src:ImgSrc,alt:ImgAlt});
+    $("img#MainPhoto").hide();
+    $("img#MainPhoto").fadeIn("slow");
+    return false;
+  });
+});
+</script>
 </body>
 </html>
