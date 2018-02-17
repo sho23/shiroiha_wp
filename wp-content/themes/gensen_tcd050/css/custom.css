@@ -8,25 +8,28 @@ body, input, textarea, select {
 
 .wrap {
 	width:100%;
-	background:#000;
+	background:#FFF;
 	margin:20px auto;
 	padding:10px;
 }
 .wrap p {
-	height:400px;
+	height:550px;
+	margin-bottom: 5px;
 }
 .wrap ul {
 	display:block;
 	overflow:hidden;
-	margin-top:10px;
-	margin-right:-10px;
+	margin: 0;
 	clear:both;
 }
 .wrap li {
 	display:block;
 	float:left;
 	background:#fff;
-	argin-right:10px;
+	margin-right:5px;
+}
+.wrap li:last-child {
+	margin-right: 0;
 }
 .wrap li img {
 	cursor:pointer;
