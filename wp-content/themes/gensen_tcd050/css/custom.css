@@ -31,3 +31,7 @@ body, input, textarea, select {
 .wrap li img {
 	cursor:pointer;
 }
+
+.category-chiryoho .archive_sort {
+	display: none;
+}
