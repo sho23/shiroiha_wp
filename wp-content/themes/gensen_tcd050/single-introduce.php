@@ -32,17 +32,10 @@ $dp_options = get_desing_plus_option();
 
 <?php if ($dp_options['show_shoulder_copy_introduce'] && get_post_meta($post->ID, 'shoulder_copy', true)) { ?>
   <?php if (false) { ?>
-     <div class="introduce_shoulder_copy">
-      <?php echo esc_html(trim(get_post_meta($post->ID, 'shoulder_copy', true))); ?>
-     </div>
-    <?php } ?>
-    <?php
-      $data = trim(get_post_meta($post->ID, 'shoulder_copy', true));
-      $elms=explode(',',$data);
-     ?>
-    <div>住所：<?php echo $elms[0]; ?></div>
-    <div>電話：<?php echo $elms[1]; ?></div>
-    <div>WEB：<?php echo $elms[2]; ?></div>
+    <div class="introduce_shoulder_copy">
+    <?php echo esc_html(trim(get_post_meta($post->ID, 'shoulder_copy', true))); ?>
+    </div>
+  <?php } ?>
 <?php } ?>
 
 <?php if ($introduce_slider && $page == '1') { ?>
@@ -95,9 +88,28 @@ $dp_options = get_desing_plus_option();
           }
         }
 ?>
-
-   <h2 id="post_title" class="rich_font"><?php the_title(); ?></h2>
-
+  <div class="custom-header">
+    <div class="pull-left">
+      <h2 id="post_title" class="rich_font"><?php the_title(); ?></h2>
+      <?php if ($dp_options['show_shoulder_copy_introduce'] && get_post_meta($post->ID, 'shoulder_copy', true)) { ?>
+        <?php $data = trim(get_post_meta($post->ID, 'shoulder_copy', true));
+              $elms=explode(',',$data); ?>
+        <p class="elm-inline"><i class="fas fa-map-marker-alt"></i> <?php echo $elms[0]; ?><!-- 住所を出力 --></p>
+        <ul class="elm-inline">
+          <?php if ($dp_options['show_tag_introduce'] && $dp_options['use_introduce_tag'] && get_the_terms($post->ID, $dp_options['introduce_tag_slug'])) { ?>
+              <?php echo get_the_term_list($post->ID, $dp_options['introduce_tag_slug'], '<li class="post_tag"><i class="fas fa-star"></i> ',' ','</li>'); ?>
+          <?php } ?>
+        </ul>
+      <?php } ?>
+    </div>
+    <div class="pull-right">
+      <ul>
+        <li class="btn btn-blue elm-inline"><span><i class="fas fa-map-marker-alt fa-2x"></i></span><a href="#">MAP</a></li>
+        <li class="btn btn-blue elm-inline"><span><i class="fas fa-calendar-alt fa-2x"></i></span><a href="#">予約</a></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </div><!-- end custom-header -->
 <?php if ($dp_options['show_date_introduce']) { ?>
     <div id="post_date"><time class="entry-date updated" datetime="<?php the_modified_time('c'); ?>"><?php the_time('Y.m.d'); ?></time></div>
 <?php } ?>

@@ -45,3 +45,60 @@ body, input, textarea, select {
 .post-type-archive-introduce .shoulder_copy {
 	display: inherit;
 }
+
+
+/********* single-page-header *********/
+.pull-left .post_tag a {
+	background: #e8e8e8;
+	padding: 5px;
+}
+
+/********** common ***********/
+/*button*/
+.btn {
+	border-radius: 15px;
+	padding: 5px;
+	height: 70px;
+	width: 70px;
+	text-align: center;
+	margin: 5px;
+	color: #FFF;
+	position: relative;
+}
+.btn a {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	right: 0;
+}
+.btn span {
+	line-height: 70px;
+	text-align: center;
+}
+.btn:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.btn-blue {
+	background: #3342b8;
+}
+.btn-blue a {
+	color: #FFF;
+	display: block;
+}
+
+.elm-inline {
+	display: inline-block;
+}
+
+/*float*/
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+.clear {
+	clear: both;
+}
