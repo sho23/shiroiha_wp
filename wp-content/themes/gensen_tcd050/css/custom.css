@@ -76,6 +76,37 @@ body, input, textarea, select {
 	padding: 5px;
 	background: #e8e8e8;
 }
+
+/********* clinic-archive *********/
+.cliniclist {
+	margin-bottom: 20px;
+	padding: 20px;
+	background: #eceaea;
+	background-image: url('../img/common/cliniclistbg.jpg');
+	background-size: 920px;
+	background-repeat: no-repeat;
+}
+.cliniclist h2 {
+	font-size: 26px;
+}
+.cliniclist h2 svg {
+	color: #ffcc00;
+}
+.area-box {
+	float: left;
+	margin: 20px;
+}
+.area-box .pref {
+	font-size: 18px;
+	line-height: 2em;
+	color: #3342b8;
+}
+.area-box .area {
+	font-size: 15px;
+	line-height: 2em;
+	color: #3342b8;
+}
+
 /********** common ***********/
 /*button*/
 .btn {
