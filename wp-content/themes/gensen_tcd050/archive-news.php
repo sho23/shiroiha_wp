@@ -8,6 +8,52 @@
 <div id="main_col" class="clearfix">
 
  <div id="left_col">
+      <?php $terms = get_terms('area', array('hide_empty' => false, 'parent' => 0));
+      foreach ($terms as $term) {
+        $name = $term->name;
+        echo '<br>';
+        echo $name;
+        $terms2 = get_terms('area', array('hide_empty' => false, 'parent' => $term->term_id));
+        foreach ($terms2 as $term2) {
+          $cldName = $term2->name;
+          echo ' ';
+          echo $cldName;
+        }
+      }
+      ?>
+<br><br>
+<br><br>
+<?php // タームに紐づく投稿の一覧を表示
+$taxonomy_slug = 'area'; // カスタムタクソノミーのスラッグを指定
+$post_type_slug = 'introduce'; // 投稿タイプのスラッグを指定
+$terms = get_terms($taxonomy_slug, array('hide_empty' => false, 'parent' => 0));
+foreach ($terms as $term) {
+  echo '<br><br><h1>'.esc_html($term->name).'</h1>'; // ターム名を表示
+  $terms2 = get_terms('area', array('hide_empty' => false, 'parent' => $term->term_id));
+  foreach ( $terms2 as $value ) {
+?>
+<?php
+    echo '<br><h2>'.esc_html($value->name).'</h2>'; // ターム名を表示
+    $term_slug = $value->slug; // タームに紐づく投稿一覧のクエリを設定
+    $args = array(
+    'post_type' => $post_type_slug, // 投稿タイプの指定
+    $taxonomy_slug => $term_slug , // タクソノミーからタームを指定
+    'posts_per_page' => -1, // タームに紐づく投稿を全てを表示
+    'post_status' => 'publish' // 公開済みの投稿を表示
+    );
+    $myquery = new WP_Query($args);
+?>
+  <?php if ( $myquery->have_posts()): ?>
+    <ul>
+      <?php while($myquery->have_posts()): $myquery->the_post(); ?>
+      <li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+      <?php endwhile; ?>
+    </ul>
+  <?php endif; ?>
+  <?php wp_reset_postdata(); ?>
+<?php }} // ループの終了 ?>
+
+
 
 <?php if ( have_posts() ) : ?>
   <div id="recent_news">
