@@ -23,6 +23,7 @@ if (! $dp_options) $dp_options = get_desing_plus_option();
 <?php wp_head(); ?>
 
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/custom.css">
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 <body id="body" <?php body_class(); ?>>
 
