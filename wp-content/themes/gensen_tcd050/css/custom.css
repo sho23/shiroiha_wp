@@ -53,6 +53,29 @@ body, input, textarea, select {
 	padding: 5px;
 }
 
+/********* seach-introduce-layout *********/
+.post-type-archive-introduce .image, .post-type-archive-introduce .excerpt {
+	display: none;
+}
+.post-type-archive-introduce ul.meta, .post-type-archive-introduce h3.title {
+	float: left;
+}
+.post-type-archive-introduce #post_list2 .article .info {
+	width: 100%;
+	float: inherit;
+}
+
+.post-type-archive-introduce .shoulder_copy ul {
+	margin-bottom: 20px;
+}
+
+.post-type-archive-introduce #post_list2 .article .tags span {
+	display: inline-block;
+	padding: 0;
+	margin-right: 5px;
+	padding: 5px;
+	background: #e8e8e8;
+}
 /********** common ***********/
 /*button*/
 .btn {

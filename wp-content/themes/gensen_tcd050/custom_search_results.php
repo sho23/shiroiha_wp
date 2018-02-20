@@ -109,7 +109,6 @@
 <?php get_template_part('navigation2'); ?>
 
  <ol id="post_list2">
-
 <?php   while ( have_posts() ) : the_post(); ?>
   <li class="article">
    <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>" class="clearfix">
@@ -130,15 +129,6 @@
 			} ?>
     </div>
     <div class="info">
-      <div class="shoulder_copy">
-        <?php
-          $data = trim(get_post_meta($post->ID, 'shoulder_copy', true));
-          $elms=explode(',',$data);
-         ?>
-        <div>住所：<?php echo $elms[0]; ?></div>
-        <div>電話：<?php echo $elms[1]; ?></div>
-        <div>WEB：<?php echo $elms[2]; ?></div>
-      </div>
 <?php
         $metas = array();
         if ($post->post_type == 'post') {
@@ -184,6 +174,31 @@
 ?>
      <h3 class="title"><?php trim_title(38); ?></h3>
      <p class="excerpt"><?php new_excerpt(118); ?></p>
+      <div class="clear"></div>
+      <div class="shoulder_copy">
+        <?php
+          $data = trim(get_post_meta($post->ID, 'shoulder_copy', true));
+          $elms=explode(',',$data);
+         ?>
+        <ul>
+          <li class="elm-inline"><i class="fas fa-map-marker-alt"></i> <?php echo $elms[0]; ?></li>
+          <li class="elm-inline"><i class="fas fa-clock"></i> <?php echo $elms[1]; ?></li>
+          <li class="elm-inline"><i class="fas fa-calendar-times"></i> <?php echo $elms[2]; ?></li>
+        </ul>
+        <div class="tags">
+          <?php if ($dp_options['show_tag_introduce'] && $dp_options['use_introduce_tag'] && get_the_terms($post->ID, $dp_options['introduce_tag_slug'])) { ?>
+            <i class="fas fa-star"></i>
+            <?php
+              $terms = get_the_terms( $post->ID, 'introduce_tag');
+              if ( !empty($terms) ) : if ( !is_wp_error($terms) ) :
+            ?>
+                <?php foreach( $terms as $term ) : ?>
+                  <span><?php echo $term->name; ?></span>
+                <?php endforeach; ?>
+              <?php endif; endif; ?>
+            <?php } ?>
+        </div>
+      </div>
     </div>
    </a>
   </li>
