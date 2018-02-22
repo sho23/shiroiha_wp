@@ -22,6 +22,7 @@ if (! $dp_options) $dp_options = get_desing_plus_option();
 <?php wp_enqueue_style('style', get_stylesheet_uri(), false, version_num(), 'all'); wp_enqueue_script( 'jquery' ); if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 <?php wp_head(); ?>
 
+<link rel="stylesheet" href="<?php echo get_home_url(); ?>/wp-includes/css/magnific-popup.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/custom.css">
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>

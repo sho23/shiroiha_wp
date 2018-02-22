@@ -582,5 +582,13 @@ $(function(){
   });
 });
 </script>
+<script src="<?php echo get_home_url(); ?>/wp-includes/js/jquery.magnific-popup.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('.open-popup-link').magnificPopup({
+    type:'inline'
+  });
+});
+</script>
 </body>
 </html>
