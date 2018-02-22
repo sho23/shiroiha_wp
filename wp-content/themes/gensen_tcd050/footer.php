@@ -367,7 +367,8 @@ jQuery(document).ready(function($){
       }
 
     // introduce archive
-    } elseif (is_post_type_archive($dp_options['introduce_slug']) && !$custom_search_vars) {
+    } elseif (false) {
+    // } elseif (is_post_type_archive($dp_options['introduce_slug']) && !$custom_search_vars) {
 ?>
     var $container = $('#introduce_list');
     $container.imagesLoaded(function(){
