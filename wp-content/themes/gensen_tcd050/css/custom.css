@@ -2,7 +2,7 @@
 	font-family: 'smartfont';
 	src: url('../fonts/smartfont.otf');
 }
-body, input, textarea, select, .headline {
+body, input, textarea, select, .rich_font {
 	font-family: 'smartfont';
 }
 
