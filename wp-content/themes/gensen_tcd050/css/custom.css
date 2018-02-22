@@ -140,30 +140,24 @@ body, input, textarea, select {
 	width: 70px;
 	text-align: center;
 	margin: 5px;
-	color: #FFF;
 	position: relative;
-}
-.btn a {
-	position: absolute;
-	bottom: 10px;
-	left: 0;
-	right: 0;
-}
-.btn span {
-	line-height: 70px;
-	text-align: center;
 }
 .btn:hover {
 	opacity: 0.8;
 	cursor: pointer;
 }
-
 .btn-blue {
 	background: #3342b8;
+}
+.btn-icon {
+	margin-bottom: 14px;
+    margin-top: 7px;
 }
 .btn-blue a {
 	color: #FFF;
 	display: block;
+	width: 100%;
+	height: 100%;
 }
 
 .elm-inline {
@@ -180,4 +174,41 @@ body, input, textarea, select {
 }
 .clear {
 	clear: both;
+}
+
+
+/*popup*/
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 600px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.pop-img img {
+	width: 200px;
+}
+.pop-img, .pop-content {
+	float: left;
+}
+.pop-content {
+	text-align: center;
+	padding: 35px 10px;
+}
+.pop-content p {
+	font-size: 22px;
+}
+.pop-content h3 {
+	font-size: 30px;
+	line-height: 1.8em;
+}
+.pop-content h2 {
+	font-size: 41px;
+	color: #3342b8;
+	background: #f7f7f7;
+	padding: 10px 14px;
+    margin-top: 30px;
 }

@@ -104,8 +104,17 @@ $dp_options = get_desing_plus_option();
     </div>
     <div class="pull-right">
       <ul>
-        <li class="btn btn-blue elm-inline"><span><i class="fas fa-map-marker-alt fa-2x"></i></span><a href="#">MAP</a></li>
-        <li class="btn btn-blue elm-inline"><span><i class="fas fa-calendar-alt fa-2x"></i></span><a href="#">予約</a></li>
+        <li class="btn btn-blue elm-inline"><a href="#"><p class="btn-icon"><i class="fas fa-map-marker-alt fa-2x"></i></p><p>MAP</p></a></li>
+        <li class="btn btn-blue elm-inline"><a href="#test-popup" class="open-popup-link"><p class="btn-icon"><i class="fas fa-calendar-alt fa-2x"></i></p><p>予約</p></a></li>
+        <div id="test-popup" class="white-popup mfp-hide">
+          <div class="pop-img"><img src="<?php echo get_template_directory_uri(); ?>//img/common/imgmodal.jpg" alt=""></div>
+          <div class="pop-content">
+            <p>お電話の際に</p>
+            <h3>「白い歯.clubを見た」</h3>
+            <p>とお伝えください。</p>
+            <h2><?php echo $elms[4]; ?></h2>
+          </div>
+        </div>
       </ul>
     </div>
     <div class="clear"></div>
