@@ -2,7 +2,7 @@
 	font-family: 'smartfont';
 	src: url('../fonts/smartfont.otf');
 }
-body, input, textarea, select {
+body, input, textarea, select, .headline {
 	font-family: 'smartfont';
 }
 
@@ -115,7 +115,7 @@ body, input, textarea, select {
 .area-box .area {
 	font-size: 15px;
 	color: #000;
-	line-height: 1.2em;
+	line-height: 1.4em;
 
 }
 .area-box li a {
