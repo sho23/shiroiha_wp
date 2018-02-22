@@ -119,7 +119,7 @@
 <?php } ?>
 
     <div class="cliniclist">
-      <h2 class="cs-headline"> 登録歯科医院一覧</h2>
+      <h2 class="cs-headline rich_font"> 登録歯科医院一覧</h2>
       <div class="area-box-outer">
 <?php // タームに紐づく投稿の一覧を表示
 $taxonomy_slug = 'area'; // カスタムタクソノミーのスラッグを指定
