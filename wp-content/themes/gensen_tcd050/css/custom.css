@@ -72,9 +72,18 @@ body, input, textarea, select {
 .post-type-archive-introduce #post_list2 .article .tags span {
 	display: inline-block;
 	padding: 0;
-	margin-right: 5px;
-	padding: 5px;
-	background: #e8e8e8;
+	margin-right: 2px;
+	padding: 5px 6px;
+	background: #f7f7f7;
+}
+
+#post_list2 .article:hover {
+	background: #fafafa;
+}
+#post_list2 .article .title {
+	margin-left: 4px;
+	line-height: 1.4em;
+	font-size: 18px;
 }
 
 /********* clinic-archive *********/
@@ -159,6 +168,7 @@ body, input, textarea, select {
 
 .elm-inline {
 	display: inline-block;
+	margin-right: 4px;
 }
 
 /*float*/
