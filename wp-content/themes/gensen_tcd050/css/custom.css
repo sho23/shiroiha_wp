@@ -81,33 +81,48 @@ body, input, textarea, select {
 .cliniclist {
 	margin-bottom: 20px;
 	padding: 20px;
-	background: #eceaea;
-	background-image: url('../img/common/cliniclistbg.jpg');
-	background-size: 920px;
-	background-repeat: no-repeat;
 }
-.cliniclist h2 {
-	font-size: 26px;
+
+.area-box-outer {
+	display: flex;
+	flex-wrap: wrap;
 }
-.cliniclist h2 svg {
-	color: #ffcc00;
-}
+
 .area-box {
-	float: left;
-	margin: 20px;
+	width: 33%;
+	padding: 20px;
+    box-sizing: border-box;
 }
 .area-box .pref {
-	font-size: 18px;
-	line-height: 2em;
-	color: #3342b8;
+	font-size: 16px;
+	color: #FFF;
+	background: #000;
+	border-radius: 30px;
+	text-align: center;
+	display: inline-block;
+    padding: 5px 20px;
+    margin-bottom: 14px;
 }
 .area-box .area {
 	font-size: 15px;
-	line-height: 2em;
+	color: #000;
+	line-height: 1.2em;
+
+}
+.area-box li a {
+	line-height: 1.4em;
 	color: #3342b8;
 }
-
+.area-box li a:hover {
+	color: #b69e84;
+}
 /********** common ***********/
+/*font*/
+.cs-headline {
+	font-size: 42px;
+	color: #c0b09d;
+}
+
 /*button*/
 .btn {
 	border-radius: 15px;

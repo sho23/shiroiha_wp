@@ -118,6 +118,43 @@
  </div>
 <?php } ?>
 
+    <div class="cliniclist">
+      <h2 class="cs-headline"> 登録歯科医院一覧</h2>
+      <div class="area-box-outer">
+<?php // タームに紐づく投稿の一覧を表示
+$taxonomy_slug = 'area'; // カスタムタクソノミーのスラッグを指定
+$post_type_slug = 'introduce'; // 投稿タイプのスラッグを指定
+$terms = get_terms($taxonomy_slug, array('hide_empty' => false, 'parent' => 0));
+foreach ($terms as $term) {
+  echo '<div class="area-box"><br><br><p class="pref">'.esc_html($term->name).'</p>'; // ターム名を表示
+  $terms2 = get_terms('area', array('hide_empty' => false, 'parent' => $term->term_id));
+  foreach ( $terms2 as $value ) {
+?>
+<?php
+    echo '<p class="area">&nbsp;'.esc_html($value->name).'</p>'; // ターム名を表示
+    $term_slug = $value->slug; // タームに紐づく投稿一覧のクエリを設定
+    $args = array(
+    'post_type' => $post_type_slug, // 投稿タイプの指定
+    $taxonomy_slug => $term_slug , // タクソノミーからタームを指定
+    'posts_per_page' => -1, // タームに紐づく投稿を全てを表示
+    'post_status' => 'publish' // 公開済みの投稿を表示
+    );
+    $myquery = new WP_Query($args);
+?>
+  <?php if ( $myquery->have_posts()): ?>
+    <ul>
+      <?php while($myquery->have_posts()): $myquery->the_post(); ?>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-right"></i> <a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+      <?php endwhile; ?>
+    </ul>
+  <?php endif; ?>
+  <?php wp_reset_postdata(); ?>
+<?php }
+echo '</div>';
+} // ループの終了 ?>
+<div class="clear"></div>
+</div></div>
+<?php if (false) : ?><!-- 既存のアーカイブを非表示 -->
 <?php if ( have_posts() ) : ?>
  <div id="introduce_list">
   <div class="introduce_list_row clearfix">
@@ -187,6 +224,7 @@
 <?php else: ?>
  <p class="no_post"><?php _e('There is no registered post.', 'tcd-w'); ?></p>
 <?php endif; ?>
+<?php endif; ?><!-- 既存のアーカイブを非表示処理の終了 -->
 
 </div><!-- END #main_col -->
 
