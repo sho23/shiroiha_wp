@@ -220,6 +220,9 @@ body, input, textarea, select, .rich_font {
 .post_content th {
 	background: #F7F7F7;
 }
+.single-introduce #article #post_title {
+	margin: 0;
+}
 .single-introduce .post_content .btn {
 	margin: 0;
     line-height: 40px;
