@@ -288,4 +288,10 @@ body, input, textarea, select, .rich_font {
 	.single-introduce #post_title {
 		font-size: 24px;
 	}
+	.single-introduce .cs-timetable .post_content td, .single-introduce .cs-timetable .post_content th {
+		padding: 5px;
+	}
+	.single-introduce .cs-info iframe {
+		display: none;
+	}
 }
