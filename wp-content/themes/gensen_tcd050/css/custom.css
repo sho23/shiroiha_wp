@@ -262,6 +262,13 @@ body, input, textarea, select, .rich_font {
 	float: right;
 }
 
+.single-introduce .cs-info iframe {
+	display: inherit;
+}
+.single-introduce .sp-map-btn {
+	display: none;
+}
+
 /************ layout for sp ************/
 @media (max-width: 600px) {
 	.area-box {
@@ -293,5 +300,8 @@ body, input, textarea, select, .rich_font {
 	}
 	.single-introduce .cs-info iframe {
 		display: none;
+	}
+	.single-introduce .sp-map-btn {
+		display: inherit;
 	}
 }
