@@ -304,4 +304,7 @@ body, input, textarea, select, .rich_font {
 	.single-introduce .sp-map-btn {
 		display: inherit;
 	}
+	.single-introduce .cs-info p {
+		line-height: 0;
+	}
 }
