@@ -13,7 +13,7 @@ body, input, textarea, select, .rich_font {
 	border-top: 1px #ddd solid;
 }
 .wrap p {
-	width: 860px;
+	width: 100%;
     margin-bottom: 0;
     line-height: 1.2;
 }
@@ -280,5 +280,8 @@ body, input, textarea, select, .rich_font {
 	}
 	.single-introduce .cs-header-btns {
 		float: inherit;
+	}
+	.single-introduce #post_title {
+		font-size: 24px;
 	}
 }
