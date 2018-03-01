@@ -115,12 +115,16 @@ body, input, textarea, select, .rich_font {
 .area-box .area {
 	font-size: 15px;
 	color: #000;
-	line-height: 1.4em;
+	line-height: 2em;
 
 }
 .area-box li a {
-	line-height: 1.4em;
+	font-size: 15px;
+	line-height: 2em;
 	color: #3342b8;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .area-box li a:hover {
 	color: #b69e84;
@@ -211,4 +215,16 @@ body, input, textarea, select, .rich_font {
 	background: #f7f7f7;
 	padding: 10px 14px;
     margin-top: 30px;
+}
+
+/************ layout for sp ************/
+@media (max-width: 600px) {
+	.area-box {
+		width: 100%;
+		padding: 0;
+	}
+	.cs-headline {
+		font-size: 26px;
+		text-align: center;
+	}
 }

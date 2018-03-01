@@ -144,7 +144,7 @@ foreach ($terms as $term) {
   <?php if ( $myquery->have_posts()): ?>
     <ul>
       <?php while($myquery->have_posts()): $myquery->the_post(); ?>
-      <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-right"></i> <a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-right"></i> <a href="<?php the_permalink() ?>"><?php echo mb_strimwidth(get_the_title(), 0, 30, "…"); ?></a></li>
       <?php endwhile; ?>
     </ul>
   <?php endif; ?>
