@@ -218,6 +218,12 @@ body, input, textarea, select, .rich_font {
 }
 
 /*hospital post*/
+.post_content table {
+	color: #666;
+}
+.post_content th {
+	background: #F7F7F7;
+}
 .single-introduce .post_content .btn {
 	margin: 0;
     line-height: 40px;
