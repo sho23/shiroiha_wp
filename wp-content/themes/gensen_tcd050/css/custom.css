@@ -345,4 +345,7 @@ body, input, textarea, select, .rich_font {
 	.top-message p {
 		font-size: 12px;
 	}
+	#global_menu li a {
+		color: #FFF !important;
+	}
 }
