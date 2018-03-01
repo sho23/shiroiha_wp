@@ -305,6 +305,6 @@ body, input, textarea, select, .rich_font {
 		display: inherit;
 	}
 	.single-introduce .cs-info p {
-		line-height: 0;
+		margin: 0;
 	}
 }
