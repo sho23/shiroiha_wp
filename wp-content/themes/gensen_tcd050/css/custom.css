@@ -10,11 +10,12 @@ body, input, textarea, select, .rich_font {
 	width:100%;
 	background:#FFF;
 	margin:20px auto;
-	padding:10px;
+	border-top: 1px #ddd solid;
 }
 .wrap p {
-	height:550px;
-	margin-bottom: 5px;
+	width: 860px;
+    margin-bottom: 0;
+    line-height: 1.2;
 }
 .wrap ul {
 	display:block;
@@ -26,7 +27,8 @@ body, input, textarea, select, .rich_font {
 	display:block;
 	float:left;
 	background:#fff;
-	margin-right:5px;
+	margin-right: 0.8%;
+    width: 32.8%;
 }
 .wrap li:last-child {
 	margin-right: 0;
@@ -44,13 +46,6 @@ body, input, textarea, select, .rich_font {
 }
 .post-type-archive-introduce .shoulder_copy {
 	display: inherit;
-}
-
-
-/********* single-page-header *********/
-.pull-left .post_tag a {
-	background: #e8e8e8;
-	padding: 5px;
 }
 
 /********* seach-introduce-layout *********/
@@ -255,6 +250,18 @@ body, input, textarea, select, .rich_font {
 	margin: 0;
 }
 
+.single-introduce .cs-header-text .post_tag a {
+	background: #e8e8e8;
+	padding: 5px;
+}
+
+.single-introduce .cs-header-text {
+	float: left;
+}
+.single-introduce .cs-header-btns {
+	float: right;
+}
+
 /************ layout for sp ************/
 @media (max-width: 600px) {
 	.area-box {
@@ -264,5 +271,14 @@ body, input, textarea, select, .rich_font {
 	.cs-headline {
 		font-size: 26px;
 		text-align: center;
+	}
+	.single-introduce #main_col {
+		margin-top: 20px;
+	}
+	.single-introduce .cs-header-text {
+		float: inherit;
+	}
+	.single-introduce .cs-header-btns {
+		float: inherit;
 	}
 }

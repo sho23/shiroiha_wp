@@ -89,7 +89,7 @@ $dp_options = get_desing_plus_option();
         }
 ?>
   <div class="custom-header">
-    <div class="pull-left">
+    <div class="cs-header-text">
       <h2 id="post_title" class="rich_font"><?php the_title(); ?></h2>
       <?php if ($dp_options['show_shoulder_copy_introduce'] && get_post_meta($post->ID, 'shoulder_copy', true)) { ?>
         <?php $data = trim(get_post_meta($post->ID, 'shoulder_copy', true));
@@ -102,7 +102,7 @@ $dp_options = get_desing_plus_option();
         </ul>
       <?php } ?>
     </div>
-    <div class="pull-right">
+    <div class="cs-header-btns">
       <ul>
         <li class="btn btn-blue elm-inline"><a href="<?php echo $elms[3]; ?>" target="_blank"><p class="btn-icon"><i class="fas fa-map-marker-alt fa-2x"></i></p><p>MAP</p></a></li>
         <li class="btn btn-blue elm-inline"><a href="#test-popup" class="open-popup-link"><p class="btn-icon"><i class="fas fa-calendar-alt fa-2x"></i></p><p>予約</p></a></li>
