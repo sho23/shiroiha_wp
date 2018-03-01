@@ -94,7 +94,7 @@ $dp_options = get_desing_plus_option();
       <?php if ($dp_options['show_shoulder_copy_introduce'] && get_post_meta($post->ID, 'shoulder_copy', true)) { ?>
         <?php $data = trim(get_post_meta($post->ID, 'shoulder_copy', true));
               $elms=explode(',',$data); ?>
-        <p class="elm-inline"><i class="fas fa-map-marker-alt"></i> <?php echo $elms[3]; ?></p>
+        <p class="elm-inline"><i class="fas fa-map-marker-alt"></i> <?php echo $elms[0]; ?></p>
         <ul class="elm-inline">
           <?php if ($dp_options['show_tag_introduce'] && $dp_options['use_introduce_tag'] && get_the_terms($post->ID, $dp_options['introduce_tag_slug'])) { ?>
               <?php echo get_the_term_list($post->ID, $dp_options['introduce_tag_slug'], '<li class="post_tag"><i class="fas fa-star"></i> ',' ','</li>'); ?>
@@ -104,7 +104,7 @@ $dp_options = get_desing_plus_option();
     </div>
     <div class="pull-right">
       <ul>
-        <li class="btn btn-blue elm-inline"><a href="#"><p class="btn-icon"><i class="fas fa-map-marker-alt fa-2x"></i></p><p>MAP</p></a></li>
+        <li class="btn btn-blue elm-inline"><a href="<?php echo $elms[3]; ?>"><p class="btn-icon"><i class="fas fa-map-marker-alt fa-2x"></i></p><p>MAP</p></a></li>
         <li class="btn btn-blue elm-inline"><a href="#test-popup" class="open-popup-link"><p class="btn-icon"><i class="fas fa-calendar-alt fa-2x"></i></p><p>予約</p></a></li>
         <div id="test-popup" class="white-popup mfp-hide">
           <div class="pop-img"><img src="<?php echo get_template_directory_uri(); ?>//img/common/imgmodal.jpg" alt=""></div>
