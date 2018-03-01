@@ -239,6 +239,10 @@ body, input, textarea, select, .rich_font {
     margin-bottom: 30px;
 }
 
+.single-introduce .post_content td, .post_content th {
+	border: 1px solid #ddd;
+}
+
 /************ layout for sp ************/
 @media (max-width: 600px) {
 	.area-box {
