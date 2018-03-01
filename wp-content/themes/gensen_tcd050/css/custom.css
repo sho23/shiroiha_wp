@@ -326,4 +326,16 @@ body, input, textarea, select, .rich_font {
 	.director-img img {
 		max-width: 300px;
 	}
-}
+	.pop-img {
+		float: inherit;
+		text-align: center;
+	}
+	.pop-img img {
+		width: 15px;
+	}
+	.pop-content h2 {
+		font-size: 25px;
+	}
+	.pop-content h3 {
+		font-size: 20px;
+	}}
