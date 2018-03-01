@@ -307,4 +307,13 @@ body, input, textarea, select, .rich_font {
 	.single-introduce .cs-info p {
 		margin: 0;
 	}
+	.single-introduce p, .single-introduce table {
+		font-size: 12px;
+	}
+	.single-introduce .post_content h3 {
+		font-size: 20px;
+	}
+	.single-introduce .director h5 {
+		font-size: 14px;
+	}
 }
