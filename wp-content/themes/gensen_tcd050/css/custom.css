@@ -278,6 +278,10 @@ body, input, textarea, select, .rich_font {
 	.single-introduce .cs-header-text {
 		float: inherit;
 	}
+	.cs-header-text ul {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
 	.single-introduce .cs-header-btns {
 		float: inherit;
 	}
