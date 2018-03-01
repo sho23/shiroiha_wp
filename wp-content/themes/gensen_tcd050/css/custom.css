@@ -218,11 +218,19 @@ body, input, textarea, select, .rich_font {
 }
 
 /*hospital post*/
-.post_content .btn {
+.single-introduce .post_content .btn {
 	margin: 0;
     line-height: 40px;
     height: 40px;
     padding: 5px 20px;
+}
+.single-introduce .post_content h3 {
+	padding-top: 20px;
+    color: #3342b8;
+    border-bottom: 3px #3342b8 solid;
+    padding-bottom: 10px;
+    font-size: 30px;
+    margin-bottom: 30px;
 }
 
 /************ layout for sp ************/
