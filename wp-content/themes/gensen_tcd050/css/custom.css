@@ -11,6 +11,7 @@ body, input, textarea, select, .rich_font {
 	background:#FFF;
 	margin:20px auto;
 	border-top: 1px #ddd solid;
+	padding-top: 20px;
 }
 .wrap p {
 	width: 100%;
@@ -238,7 +239,7 @@ body, input, textarea, select, .rich_font {
 	border: 1px solid #ddd;
 }
 .single-introduce .director-img img {
-	max-width: 250px;
+	max-width: 300px;
 	margin-right: 40px;
 	margin-left: 20px;
 }
@@ -315,5 +316,11 @@ body, input, textarea, select, .rich_font {
 	}
 	.single-introduce .director h5 {
 		font-size: 14px;
+	}
+	.director-img {
+		float: inherit;
+	}
+	.director-img img {
+		max-width: 300px;
 	}
 }
