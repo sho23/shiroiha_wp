@@ -217,6 +217,14 @@ body, input, textarea, select, .rich_font {
     margin-top: 30px;
 }
 
+/*hospital post*/
+.post_content .btn {
+	margin: 0;
+    line-height: 40px;
+    height: 40px;
+    padding: 5px 20px;
+}
+
 /************ layout for sp ************/
 @media (max-width: 600px) {
 	.area-box {
