@@ -339,7 +339,7 @@ body, input, textarea, select, .rich_font {
 	.pop-content h3 {
 		font-size: 20px;
 	}
-	.top-message h2 {
+	.top-message .cb_headline {
 		font-size: 20px;
 	}
 	.top-message p {
