@@ -45,27 +45,46 @@ body, input, textarea, select, .rich_font {
 .archive .shoulder_copy {
 	display: none;
 }
-.post-type-archive-introduce .shoulder_copy {
+
+/********* seach-introduce-layout *********/
+.post-type-archive-introduce .shoulder_copy,
+.tax-treatcategory .shoulder_copy,
+.tax-area .shoulder_copy
+{
 	display: inherit;
 }
 
-/********* seach-introduce-layout *********/
-.post-type-archive-introduce .image, .post-type-archive-introduce .excerpt {
+.post-type-archive-introduce .image, .post-type-archive-introduce .excerpt,
+.tax-treatcategory .image, .tax-treatcategory .excerpt,
+.tax-area .image, .tax-area .excerpt
+{
 	display: none;
 }
-.post-type-archive-introduce ul.meta, .post-type-archive-introduce h3.title {
+.post-type-archive-introduce ul.meta, .post-type-archive-introduce h3.title,
+.tax-treatcategory ul.meta, .tax-treatcategory h3.title,
+.tax-area ul.meta, .tax-area h3.title
+{
 	float: left;
 }
-.post-type-archive-introduce #post_list2 .article .info {
+.post-type-archive-introduce #post_list2 .article .info,
+.tax-treatcategory #post_list2 .article .info,
+.tax-area #post_list2 .article .info
+{
 	width: 100%;
 	float: inherit;
 }
 
-.post-type-archive-introduce .shoulder_copy ul {
+.post-type-archive-introduce .shoulder_copy ul,
+.tax-treatcategory .shoulder_copy ul,
+.tax-area .shoulder_copy ul
+{
 	margin-bottom: 20px;
 }
 
-.post-type-archive-introduce #post_list2 .article .tags span {
+.post-type-archive-introduce #post_list2 .article .tags span,
+.tax-treatcategory #post_list2 .article .tags span,
+.tax-area #post_list2 .article .tags span
+{
 	display: inline-block;
 	padding: 0;
 	margin-right: 2px;
