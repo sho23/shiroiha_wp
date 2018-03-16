@@ -548,7 +548,12 @@
 					if ( $content['cb_show_archive_link'] && $content['cb_archive_link_text'] && get_post_type_archive_link('post') != get_bloginfo( 'url' ) ) :
 ?>
    <div class="archive_link">
-    <a href="<?php echo get_post_type_archive_link('post'); ?>"><?php echo esc_html($content['cb_archive_link_text']); ?></a>
+    <?php if (esc_attr($key) == 1) { ?>
+      <a href="<?php echo get_bloginfo('url'); ?>/category/column/">
+    <?php } else { ?>
+      <a href="<?php echo get_post_type_archive_link('post'); ?>">
+    <?php } ?>
+    <?php echo esc_html($content['cb_archive_link_text']); ?></a>
    </div>
 <?php
 					endif;
